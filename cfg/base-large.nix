@@ -19,7 +19,6 @@
      squashfsTools
      tdesktop
      texlive.combined.scheme-small
-     transmission-gtk
      virtmanager
      x11_ssh_askpass
   ];

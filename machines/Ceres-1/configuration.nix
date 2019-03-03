@@ -10,6 +10,9 @@
     ../../cfg/base-large.nix
     ../../cfg/desktop-i3.nix
     ../../cfg/virtualisation.nix
+    ../../cfg/transmission.nix
+    ../../cfg/plex.nix
+    ../../cfg/postgresql.nix
   ];
 
   boot.loader.systemd-boot.enable = true;

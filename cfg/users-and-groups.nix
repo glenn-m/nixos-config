@@ -5,10 +5,11 @@
       description = "Glenn McDonald";
       uid = 1000;
       extraGroups = [
-        "wheel"
-        "networkmanager"
-        "libvirtd"
         "docker"
+        "libvirtd"
+        "networkmanager"
+        "transmission"
+        "wheel" # sudo
       ];
       isNormalUser = true;
       initialPassword = "initialpw";

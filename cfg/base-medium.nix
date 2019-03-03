@@ -19,6 +19,7 @@
     gnupg
     gzip
     inotify-tools
+    ldns
     openssl
     stow
     termite
