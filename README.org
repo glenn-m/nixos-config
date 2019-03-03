@@ -1,0 +1,14 @@
+#+TITLE: nixos-config
+
+* nixos-config
+Configuration files for my [[https://nixos.org/][NixOS]] machines
+
+* Installation
+#+BEGIN_SRC shell
+
+sudo mv /etc/nixos /etc/nixos.bak
+sudo git clone https://github.com/glenn-m/nixos-config /etc/nixos
+sudo cp /etc/nixos.bak/hardware-configuration.nix /etc/nixos
+sudo ln -sr /etc/nixos/machines/${MACHINE}/configuration /etc/nixos/configuration.nix
+
+#+END_SRC
