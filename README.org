@@ -1,6 +1,4 @@
 #+TITLE: nixos-config
-
-* nixos-config
 Configuration files for my [[https://nixos.org/][NixOS]] machines
 
 * Installation
