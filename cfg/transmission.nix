@@ -20,7 +20,7 @@
       };
     };
 
-  networking.firewall.allowedTCPPorts = [ 9091 ];
+    networking.firewall.allowedTCPPorts = [ 9091 51413 ];
 
   # Creating /home/media requires root privileges. The transmission service
   # itself runs as an unpriveleged users. Use this helper service to create

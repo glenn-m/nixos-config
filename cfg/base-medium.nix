@@ -15,6 +15,9 @@
     firefox
     gcc
     gitMinimal
+    autoconf
+    pkgconfig
+    automake
     gnumake42
     gnupg
     gzip

@@ -8,7 +8,6 @@
   environment.systemPackages = with pkgs; [
      beam.packages.erlangR21.elixir_1_8
      dep
-     dropbox-cli
      fwup
      go
      mpv
@@ -18,7 +17,7 @@
      spotify
      squashfsTools
      tdesktop
-     texlive.combined.scheme-small
+     texlive.combined.scheme-full
      virtmanager
      x11_ssh_askpass
   ];

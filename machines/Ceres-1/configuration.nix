@@ -13,6 +13,7 @@
     ../../cfg/transmission.nix
     ../../cfg/plex.nix
     ../../cfg/postgresql.nix
+    ../../cfg/dropbox.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
