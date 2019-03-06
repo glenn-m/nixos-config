@@ -10,3 +10,16 @@ sudo cp /etc/nixos.bak/hardware-configuration.nix /etc/nixos
 sudo ln -sr /etc/nixos/machines/${MACHINE}/configuration /etc/nixos/configuration.nix
 
 #+END_SRC
+
+* Secrets
+
+Secrets are stored in =secrets.nix=, which looks like this:
+
+#+BEGIN_SRC nix
+{
+  name = {
+    username = "foo";
+    password = "bar";
+  };
+}
+#+END_SRC
