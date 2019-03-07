@@ -14,6 +14,7 @@
     ../../cfg/plex.nix
     ../../cfg/postgresql.nix
     ../../cfg/dropbox.nix
+    ../../cfg/prometheus.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
