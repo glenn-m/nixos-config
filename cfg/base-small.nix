@@ -5,6 +5,7 @@
     ./avahi.nix
     ./keyboard.nix
     ./users-and-groups.nix
+    ./node-exporter.nix
   ];
 
   # Set your time zone.
