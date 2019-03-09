@@ -50,6 +50,7 @@
             {
               targets = [
                 "Ceres-1.local:9100"
+                "Vesta-1.local:9100"
               ];
               labels = { };
             }

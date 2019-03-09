@@ -12,6 +12,7 @@
      go
      mpv
      neofetch
+     nixops
      ranger
      rofi
      spotify

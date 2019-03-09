@@ -8,6 +8,7 @@
         "docker"
         "libvirtd"
         "networkmanager"
+        "dialout"
         "transmission"
         "wheel" # sudo
       ];

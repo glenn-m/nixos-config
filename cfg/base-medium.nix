@@ -19,6 +19,7 @@
     gzip
     inotify-tools
     ldns
+    minicom
     openssl
     stow
     termite
