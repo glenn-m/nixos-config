@@ -16,6 +16,7 @@
   environment.systemPackages = with pkgs; [
     emacs
     vim
+    gitMinimal
   ];
 
   nix = {

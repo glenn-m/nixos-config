@@ -6,9 +6,8 @@ Configuration files for my [[https://nixos.org/][NixOS]] machines
 
 sudo mv /etc/nixos /etc/nixos.bak
 sudo git clone https://github.com/glenn-m/nixos-config /etc/nixos
-sudo cp /etc/nixos.bak/hardware-configuration.nix /etc/nixos
-sudo ln -sr /etc/nixos/machines/${MACHINE}/configuration /etc/nixos/configuration.nix
-
+sudo ln -sr /etc/nixos/machines/${MACHINE}/configuration.nix /etc/nixos/configuration.nix
+sudo ln -sr /etc/nixos/machines/${MACHINE}/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
 #+END_SRC
 
 * Secrets
