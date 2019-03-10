@@ -1,7 +1,9 @@
 { config, lib, pkgs, ...}:
 {
-  users = {
-    users.gm = {
+  users =
+    let secrets = (import ../secrets.nix).users;
+    in {
+      users.gm = {
       description = "Glenn McDonald";
       uid = 1000;
       extraGroups = [
@@ -13,7 +15,7 @@
         "wheel" # sudo
       ];
       isNormalUser = true;
-      initialPassword = "initialpw";
+      initialPassword = secrets.gm.initialpw;
+      };
     };
-  };
 }
