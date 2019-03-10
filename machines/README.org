@@ -1,0 +1,7 @@
+#+TITLE: Machines
+
+| Name     | Hardware          | Purpose     |
+|----------+-------------------+-------------|
+| Ceres-1  | Custom Build      | Workstation |
+| Vesta-1  | PC Engines APU2   | Router      |
+| Hygiea-1 | Raspberry PI Zero | Misc        |
