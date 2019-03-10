@@ -11,8 +11,9 @@
       ../../cfg/node-exporter.nix
   ];
 
-  # Use GRUB2 and configure serial connection.
+  # Use GRUB2, disable vesa, and configure serial connection.
   boot = {
+    vesa = false;
     kernelParams = [ "console=ttyS0,115200n8" ];
     loader.grub = {
       enable = true;
@@ -25,10 +26,8 @@
       '';
      };
   };
-
   networking.hostName = "Vesta-1";
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "18.09";
-
 }
