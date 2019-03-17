@@ -1,25 +1,22 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ./xserver.nix ];
-
+  imports = [
+    ./xserver.nix
+  ];
   services = {
     xserver = {
-      displayManager.gdm.enable = true;
-      desktopManager = {
-        default = "none";
-        xterm.enable = false;
-      };
-
-      windowManager.i3 = {
-        enable = true;
-        extraPackages = with pkgs; [
-          i3status
-          i3lock
-        ];
+      windowManager = {
+        default = "i3";
+        i3 = {
+          enable = true;
+          extraPackages = with pkgs; [
+            i3status
+            i3lock
+          ];
+        };
       };
     };
-
     compton = {
       enable = true;
       fade = true;
