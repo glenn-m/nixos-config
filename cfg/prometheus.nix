@@ -8,17 +8,6 @@
         alertmanagerURL = [ "http://localhost:9093" ];
         rules = [
           ''
-            ALERT node_down
-            IF up == 0
-            FOR 5m
-            LABELS {
-            severity="page"
-            }
-            ANNOTATIONS {
-            summary = "{{$labels.alias}}: Node is down.",
-            description = "{{$labels.alias}} has been down for more than 5 minutes."
-            }
-
             ALERT node_systemd_service_failed
             IF node_systemd_unit_state{state="failed"} == 1
             FOR 4m
