@@ -4,6 +4,7 @@
   imports = [
     ./base-medium.nix
     ./golang.nix
+    ./rust.nix
   ];
 
   environment.systemPackages = with pkgs; [
