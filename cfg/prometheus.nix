@@ -69,6 +69,18 @@
               }
             ];
           }
+          {
+            job_name = "dnsmasq";
+            scrape_interval = "15s";
+            static_configs = [
+              {
+                targets = [
+                  "Vesta-1.local:9153"
+                ];
+                labels = { };
+              }
+            ];
+          }
         ];
       };
       prometheus.alertmanager = {
