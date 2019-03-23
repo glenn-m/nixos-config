@@ -8,20 +8,21 @@
   ];
 
   environment.systemPackages = with pkgs; [
-     beam.packages.erlangR21.elixir_1_8
-     fwup
-     mpv
-     ncdu
-     neofetch
-     nixops
-     ranger
-     rofi
-     dmenu
-     signal-desktop
-     spotify
-     squashfsTools
-     texlive.combined.scheme-full
-     x11_ssh_askpass
+    beam.packages.erlangR21.elixir_1_8
+    qutebrowser
+    fwup
+    mpv
+    ncdu
+    neofetch
+    nixops
+    ranger
+    rofi
+    dmenu
+    signal-desktop
+    spotify
+    squashfsTools
+    texlive.combined.scheme-full
+    x11_ssh_askpass
   ];
 
   environment.variables = {
