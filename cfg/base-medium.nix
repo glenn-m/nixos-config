@@ -23,7 +23,6 @@
     openssl
     stow
     termite
-    tmux
     unar
     unzip
     wget

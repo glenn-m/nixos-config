@@ -18,6 +18,5 @@
     signal-desktop
     spotify
     texlive.combined.scheme-full
-    qutebrowser
   ];
 }

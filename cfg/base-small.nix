@@ -17,6 +17,7 @@
     emacs
     gitMinimal
     pciutils
+    tmux
     vim
   ];
 
