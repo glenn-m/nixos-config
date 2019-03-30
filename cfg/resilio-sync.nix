@@ -4,4 +4,6 @@
     enable = true;
     enableWebUI = true;
   };
+
+  users.users.rslsync.extraGroups = [ "media" ];
 }

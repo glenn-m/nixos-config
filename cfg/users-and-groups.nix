@@ -11,7 +11,7 @@
           "libvirtd"
           "networkmanager"
           "dialout"
-          "transmission"
+          "media"
           "wheel" # sudo
         ];
         isNormalUser = true;

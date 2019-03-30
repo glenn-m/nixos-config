@@ -21,18 +21,19 @@
     };
 
     networking.firewall.allowedTCPPorts = [ 9091 51413 ];
+    users.groups.media.members = [ "transmission" ];
 
-  # Creating /home/media requires root privileges. The transmission service
-  # itself runs as an unpriveleged users. Use this helper service to create
-  # the required directories.
-  systemd.services.transmission-setup-dir = {
-    description = "Create /home/media Directory for Transmission";
-    requiredBy = [ "transmission.service" ];
-    before = [ "transmission.service" ];
-    script = ''
-      mkdir -p /home/media
-      chown rslsync:transmission /home/media
-    '';
-    serviceConfig.Type = "oneshot";
-  };
+    # Creating /home/media requires root privileges. The transmission service
+    # itself runs as an unpriveleged users. Use this helper service to create
+    # the required directories.
+    systemd.services.transmission-setup-dir = {
+      description = "Create /home/media Directory for Transmission";
+      requiredBy = [ "transmission.service" ];
+      before = [ "transmission.service" ];
+      script = ''
+        mkdir -p /home/media
+        chown rslsync:media /home/media
+      '';
+      serviceConfig.Type = "oneshot";
+    };
 }

@@ -3,6 +3,6 @@
   services.plex = {
     enable = true;
     openFirewall = true;
-    group = "transmission";
+    group = "media";
   };
 }
