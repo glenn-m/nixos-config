@@ -22,6 +22,7 @@
     minicom
     openssl
     stow
+    sxiv
     termite
     unar
     unzip

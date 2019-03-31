@@ -14,6 +14,7 @@
   nixpkgs.config = import ./nixpkgs-config.nix;
 
   environment.systemPackages = with pkgs; [
+    curl
     emacs
     gitMinimal
     pciutils

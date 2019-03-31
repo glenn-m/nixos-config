@@ -6,6 +6,7 @@
     ./golang.nix
     ./rust.nix
     ./elixir.nix
+    ./rlang.nix
   ];
 
   environment.systemPackages = with pkgs; [

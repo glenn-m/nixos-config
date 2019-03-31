@@ -8,13 +8,16 @@
   imports = [
     ./hardware-configuration.nix
     ../../cfg/base-large.nix
+    ../../cfg/cad.nix
     ../../cfg/desktop-i3.nix
-    ../../cfg/virtualisation.nix
-    ../../cfg/transmission.nix
+    ../../cfg/dropbox.nix
+    ../../cfg/grafana.nix
     ../../cfg/plex.nix
     ../../cfg/postgresql.nix
-    ../../cfg/dropbox.nix
     ../../cfg/prometheus.nix
+    ../../cfg/resilio-sync.nix
+    ../../cfg/transmission.nix
+    ../../cfg/virtualisation.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
