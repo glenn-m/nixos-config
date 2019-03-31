@@ -11,8 +11,9 @@
         i3 = {
           enable = true;
           extraPackages = with pkgs; [
-            i3status
             i3lock
+            i3status
+            xautolock
           ];
         };
       };
