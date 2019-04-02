@@ -5,6 +5,7 @@ let
     packages = with rPackages; [
       anytime
       checkmate
+      devtools
       dplyr
       ggplot2
       httr
