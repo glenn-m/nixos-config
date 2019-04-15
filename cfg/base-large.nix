@@ -10,13 +10,16 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    dmenu
+    lftp
+    loki
     mpv
     ncdu
     neofetch
+    playerctl
     ranger
     rofi
-    signal-desktop
+    scrot
+    slack
     spotify
     texlive.combined.scheme-full
   ];
