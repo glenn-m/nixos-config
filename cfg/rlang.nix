@@ -6,15 +6,15 @@ let
       anytime
       checkmate
       devtools
-      dplyr
-      ggplot2
       httr
       jsonlite
       knitr
+      mockery
       Rcpp
       rmarkdown
       roxygen2
       testthat
+      tidyverse
       xts
     ];
   };

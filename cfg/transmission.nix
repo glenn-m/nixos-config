@@ -32,7 +32,7 @@
       before = [ "transmission.service" ];
       script = ''
         mkdir -p /home/media
-        chown rslsync:media /home/media
+        chown transmission:media /home/media
       '';
       serviceConfig.Type = "oneshot";
     };
