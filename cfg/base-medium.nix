@@ -3,6 +3,7 @@
 {
   imports = [
     ./base-small.nix
+    ./fonts.nix
   ];
 
   sound.enable = true;
@@ -27,10 +28,6 @@
     unar
     unzip
     wget
-  ];
-
-  fonts.fonts = with pkgs; [
-     gohufont
   ];
 
   services = {

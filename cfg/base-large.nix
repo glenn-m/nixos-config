@@ -5,7 +5,6 @@
     ./base-medium.nix
     ./golang.nix
     ./rust.nix
-    ./elixir.nix
     ./rlang.nix
   ];
 

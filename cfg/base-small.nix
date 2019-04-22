@@ -5,7 +5,7 @@
     ./avahi.nix
     ./keyboard.nix
     ./users-and-groups.nix
-    ./node-exporter.nix
+    ./telegraf.nix
   ];
 
   # Set your time zone.

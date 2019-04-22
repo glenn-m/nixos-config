@@ -1,7 +1,7 @@
 { config, lib, pkgs, ...}:
 {
   services =
-    let secrets = (import ../secrets.nix).prometheus;
+    let secrets = (import ../secrets.nix).monitoring;
     in {
       prometheus = {
         enable = true;
@@ -105,8 +105,4 @@
         };
       };
     };
-    networking.firewall.allowedTCPPorts = [
-      9090 # Prometheus
-      9093 # Alertmanager
-    ];
 }

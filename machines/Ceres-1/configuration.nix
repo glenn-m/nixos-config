@@ -9,21 +9,34 @@
     ./hardware-configuration.nix
     ../../cfg/base-large.nix
     ../../cfg/cad.nix
-    ../../cfg/desktop-i3.nix
+    ../../cfg/desktop-bspwm.nix
     ../../cfg/dropbox.nix
     ../../cfg/grafana.nix
+    ../../cfg/influxdb.nix
     ../../cfg/plex.nix
-    ../../cfg/postgresql.nix
-    ../../cfg/prometheus.nix
-    ../../cfg/resilio-sync.nix
+    ../../cfg/seedbox.nix
     ../../cfg/transmission.nix
     ../../cfg/virtualisation.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
 
-  networking.hostName = "Ceres-1";
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "Ceres-1";
+    networkmanager.enable = true;
+    firewall = {
+      allowedTCPPorts = [
+        3000 # Grafana
+        8086 # InfluxDB
+        9091 # Transmission
+        17500 # Dropbox
+        51413 # Transmission
+      ];
+      allowedUDPPorts = [
+        17500 # Dropbox
+      ];
+    };
+  };
 
   # Screen layout
   services = {
@@ -36,5 +49,5 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should.
-  system.stateVersion = "18.09"; # Did you read the comment?
+  system.stateVersion = "19.03"; # Did you read the comment?
 }
