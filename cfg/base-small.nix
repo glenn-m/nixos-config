@@ -29,6 +29,11 @@
   };
 
   services = {
+    # sane journald defaults
+    journald.extraConfig = ''
+      SystemMaxUse=256M
+    '';
+
     openssh = {
       enable = true;
       permitRootLogin = "no";
