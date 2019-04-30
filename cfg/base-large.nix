@@ -4,7 +4,6 @@
   imports = [
     ./base-medium.nix
     ./golang.nix
-    ./rust.nix
     ./rlang.nix
   ];
 

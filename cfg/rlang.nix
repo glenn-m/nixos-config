@@ -10,6 +10,8 @@ let
       jsonlite
       knitr
       mockery
+      pkgdown
+      prophet
       Rcpp
       rmarkdown
       roxygen2

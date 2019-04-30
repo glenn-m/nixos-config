@@ -8,11 +8,10 @@
   imports = [
     ./hardware-configuration.nix
     ../../cfg/base-large.nix
-    ../../cfg/cad.nix
     ../../cfg/desktop-bspwm.nix
     ../../cfg/dropbox.nix
     ../../cfg/grafana.nix
-    ../../cfg/influxdb.nix
+    ../../cfg/prometheus.nix
     ../../cfg/plex.nix
     ../../cfg/seedbox.nix
     ../../cfg/transmission.nix
@@ -27,7 +26,6 @@
     firewall = {
       allowedTCPPorts = [
         3000 # Grafana
-        8086 # InfluxDB
         9091 # Transmission
         17500 # Dropbox
         51413 # Transmission
