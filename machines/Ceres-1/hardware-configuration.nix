@@ -9,18 +9,21 @@
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  hardware.enableRedistributableFirmware = true;
 
-  virtualisation.libvirtd.enable = true;
+  # Enable SoloKey
+  hardware.u2f.enable = true;
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/182598c6-709f-44ef-961a-0914536ed73d";
+    { device = "/dev/disk/by-uuid/372559b1-020e-41b5-b5a1-1496078168fc";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/B846-3242";
+    { device = "/dev/disk/by-uuid/2205-35B5";
       fsType = "vfat";
     };
   fileSystems."/home" =

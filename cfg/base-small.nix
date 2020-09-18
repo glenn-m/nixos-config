@@ -9,16 +9,14 @@
   ];
 
   # Set your time zone.
-  time.timeZone = "Europe/Dublin";
+  time.timeZone = "America/Toronto";
 
   nixpkgs.config = import ./nixpkgs-config.nix;
 
   environment.systemPackages = with pkgs; [
     curl
-    emacs
     gitMinimal
     pciutils
-    tmux
     vim
   ];
 

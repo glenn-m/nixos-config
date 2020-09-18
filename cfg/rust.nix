@@ -16,6 +16,7 @@ in
 
   environment.systemPackages = [
     pkgs.latest.rustChannels.nightly.rust
-    pkgs.rustracer 
+    pkgs.rustracer
+    pkgs.cargo
   ];
 }

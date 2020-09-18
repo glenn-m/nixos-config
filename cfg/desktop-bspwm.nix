@@ -1,16 +1,18 @@
 { config, lib, pkgs, ... }:
-
 {
-  imports = [ ./xserver.nix ];
+  imports = [
+    ./xserver.nix
+  ];
   services = {
     xserver = {
-      windowManager = {
-        i3 = {
+      windowManager= {
+        bspwm = {
           enable = true;
-          extraPackages = with pkgs; [ i3lock i3status xautolock ];
         };
       };
-      displayManager = { defaultSession = "none+i3"; };
+      displayManager = {
+        defaultSession = "none+bspwm";
+      };
     };
     compton = {
       enable = true;
@@ -22,4 +24,8 @@
       enable = true;
     };
   };
+  environment.systemPackages = with pkgs; [
+      dunst
+      i3lock
+  ];
 }

@@ -6,12 +6,13 @@ let
       anytime
       checkmate
       devtools
+      hexSticker
       httr
       jsonlite
       knitr
+      magick
       mockery
       pkgdown
-      prophet
       Rcpp
       rmarkdown
       roxygen2

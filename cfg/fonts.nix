@@ -1,10 +1,12 @@
 { config, pkgs, lib, ... }:
 {
   fonts = {
-    fontconfig.ultimate.enable = true;
     fonts = with pkgs; [
+      envypn-font
+      hack-font
       gohufont
       siji
+      font-awesome
     ];
   };
 }

@@ -3,6 +3,7 @@
   users =
     let secrets = (import ../secrets.nix).users;
     in {
+      groups.media = {};
       users.gm = {
         description = "Glenn McDonald";
         uid = 1000;

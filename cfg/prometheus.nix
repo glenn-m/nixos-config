@@ -5,7 +5,12 @@
     in {
       prometheus = {
         enable = true;
-        alertmanagerURL = [ "http://localhost:9093" ];
+        alertmanagers = [ {
+          scheme = "http";
+          static_configs = [ {
+            targets = [ "Ceres-1.local:9093" ];
+          } ];
+        } ];
         rules = [
           ''
             ALERT instance_down

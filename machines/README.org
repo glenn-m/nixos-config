@@ -1,7 +1,7 @@
 #+TITLE: Machines
 
-| Name     | Hardware          | Purpose     |
-|----------+-------------------+-------------|
-| Ceres-1  | Custom Build      | Workstation |
-| Vesta-1  | PC Engines APU2   | Router      |
-| Hygiea-1 | Raspberry PI Zero | Misc        |
+| Name        | Hardware        | Purpose       |
+|-------------+-----------------+---------------|
+| Ceres-1     | Custom Build    | Workstation   |
+| Vesta-1     | PC Engines APU2 | Router        |
+| Eros-{1..4} | Raspberry Pi 4  | Nomad Cluster |

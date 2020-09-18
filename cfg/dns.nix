@@ -1,11 +1,7 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
   services.dnsmasq = {
     enable = true;
-    servers = [
-      "1.1.1.1"
-      "141.0.144.2"
-    ];
+    servers = [ "1.1.1.1" ];
     extraConfig = ''
       domain=lan
       cache-size=1000
@@ -20,11 +16,7 @@
     '';
   };
   networking.firewall = {
-    allowedTCPPorts = [
-      53
-    ];
-    allowedUDPPorts = [
-      53
-    ];
+    allowedTCPPorts = [ 53 ];
+    allowedUDPPorts = [ 53 ];
   };
 }

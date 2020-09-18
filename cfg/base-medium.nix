@@ -9,11 +9,16 @@
   sound.enable = true;
   hardware.pulseaudio = {
     enable = true;
+    extraConfig = ''
+        # Echo cancellation and noise cleanup of mic
+        load-module module-echo-cancel aec_method=webrtc
+      '';
   };
-
   environment.systemPackages = with pkgs; [
+    ((emacsPackagesNgGen emacs).emacsWithPackages (epkgs: [
+    epkgs.vterm
+    ]))
     file
-    firefox
     gcc
     gnumake42
     gnupg
@@ -23,18 +28,19 @@
     minicom
     openssl
     stow
-    sxiv
-    termite
-    unar
     unzip
     wget
+    tex
   ];
+
+  location = {
+      latitude = 55.8642;
+      longitude = 4.2518;
+  };
 
   services = {
     redshift = {
       enable = true;
-      latitude = "55.8642";
-      longitude = "4.2518";
     };
 
     emacs = {

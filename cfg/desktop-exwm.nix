@@ -5,21 +5,15 @@
   services = {
     xserver = {
       windowManager = {
-        i3 = {
-          enable = true;
-          extraPackages = with pkgs; [ i3lock i3status xautolock ];
-        };
+        default = "exwm";
+        exwm = { enable = true; };
       };
-      displayManager = { defaultSession = "none+i3"; };
     };
     compton = {
       enable = true;
       fade = true;
       shadow = true;
       fadeDelta = 4;
-    };
-    unclutter = {
-      enable = true;
     };
   };
 }
