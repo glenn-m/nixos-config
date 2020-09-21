@@ -4,10 +4,10 @@ with lib;
 
 let
   cfg = config.services.nomad;
-  configFile =
-    if cfg.configFile == null then
+  configFile = if cfg.configFile == null then
     pkgs.writeText "config.json" (builtins.toJSON cfg.configOptions)
-    else cfg.configFile;
+  else
+    cfg.configFile;
 
 in {
   options.services.nomad = {
@@ -43,9 +43,7 @@ in {
           enabled = true;
           network_speed = 10;
         };
-        consul = {
-          address = "127.0.0.1:8500";
-        };
+        consul = { address = "127.0.0.1:8500"; };
       };
     };
 
@@ -59,7 +57,7 @@ in {
 
     group = mkOption {
       default = "docker";
-      type = types.string;
+      type = types.str;
       example = "docker";
       description = ''
         Set the group that nomad runs under.
@@ -76,9 +74,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    systemd.tmpfiles.rules = [
-      "d '${cfg.dataDir}' 0700 nomad nomad - -"
-    ];
+    systemd.tmpfiles.rules = [ "d '${cfg.dataDir}' 0700 nomad nomad - -" ];
 
     systemd.services.nomad = {
       description = "Nomad Workload Orchestrator";
@@ -86,7 +82,8 @@ in {
       wantedBy = [ "multi-user.target" ];
       path = [ pkgs.iproute ];
       serviceConfig = {
-        ExecStart = ''${cfg.package}/bin/nomad agent -config=${configFile} -data-dir=${cfg.dataDir}'';
+        ExecStart =
+          "${cfg.package}/bin/nomad agent -config=${configFile} -data-dir=${cfg.dataDir}";
         Type = "simple";
         User = "nomad";
         Group = cfg.group;
@@ -103,6 +100,6 @@ in {
       extraGroups = [ "docker" ];
     };
 
-    users.groups.nomad = {};
+    users.groups.nomad = { };
   };
 }
